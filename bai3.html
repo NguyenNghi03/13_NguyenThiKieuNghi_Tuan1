@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Dữ liệu 1
+        var dolphinsScores = [96, 108, 89];
+        var koalasScores = [88, 91, 110];
+
+        //Dữ liệu 2
+        var dolphinsScores2 = [97, 112, 101];
+        var koalasScores2 = [109, 95, 123];
+
+        //Dữ liệu 3
+        var dolphinsScores3 = [97, 112, 101];
+        var koalasScores3 = [109, 95, 106];
+
+        // Tính điểm trung bình cho từng đội
+        var averageDolphins = dolphinsScores.reduce((a, b) => a + b, 0) / dolphinsScores.length;
+        var averageKoalas = koalasScores.reduce((a, b) => a + b, 0) / koalasScores.length;
+
+        var averageDolphins2 = dolphinsScores2.reduce((a, b) => a + b, 0) / dolphinsScores2.length;
+        var averageKoalas2 = koalasScores2.reduce((a, b) => a + b, 0) / koalasScores2.length;
+
+        var averageDolphins3 = dolphinsScores3.reduce((a, b) => a + b, 0) / dolphinsScores3.length;
+        var averageKoalas3 = koalasScores3.reduce((a, b) => a + b, 0) / koalasScores3.length;
+
+        // In điểm trung bình của từng đội
+        console.log("Điểm trung bình của Dolphins:", averageDolphins);
+        console.log("Điểm trung bình của Koalas:", averageKoalas);
+
+        // So sánh điểm trung bình để xác định người chiến thắng hoặc hoà
+        if (averageDolphins > averageKoalas && averageDolphins >= 100) {
+        console.log("Dolphins thắng!");
+        } else if (averageKoalas > averageDolphins && averageKoalas >= 100) {
+        console.log("Koalas thắng!");
+        } else if (averageDolphins === averageKoalas && averageDolphins >= 100 && averageKoalas >= 100) {
+        console.log("Trận đấu hòa với điểm tối thiểu là 100!");
+        } else {
+        console.log("Không có đội tập nào chiến thắng.");
+        }
+
+        console.log("Điểm trung bình của Dolphins2:", averageDolphins2);
+        console.log("Điểm trung bình của Koalas2:", averageKoalas2);
+
+        // So sánh điểm trung bình để xác định người chiến thắng hoặc hoà
+        if (averageDolphins2 > averageKoalas2 && averageDolphins2 >= 100) {
+        console.log("Dolphins thắng!");
+        } else if (averageKoalas2 > averageDolphins2 && averageKoalas2 >= 100) {
+        console.log("Koalas thắng!");
+        } else if (averageDolphins2 === averageKoalas2 && averageDolphins2 >= 100 && averageKoalas2 >= 100) {
+        console.log("Trận đấu hòa với điểm tối thiểu là 100!");
+        } else {
+        console.log("Không có đội tập nào chiến thắng.");
+        }
+
+        console.log("Điểm trung bình của Dolphins3:", averageDolphins3);
+        console.log("Điểm trung bình của Koalas3:", averageKoalas3);
+        // So sánh điểm trung bình để xác định người chiến thắng hoặc hoà
+        if (averageDolphins3 > averageKoalas3 && averageDolphins3 >= 100) {
+        console.log("Dolphins thắng!");
+        } else if (averageKoalas3 > averageDolphins3 && averageKoalas3 >= 100) {
+        console.log("Koalas thắng!");
+        } else if (averageDolphins3 === averageKoalas3 && averageDolphins3 >= 100 && averageKoalas3 >= 100) {
+        console.log("Trận đấu hòa với điểm tối thiểu là 100!");
+        } else {
+        console.log("Không có đội tập nào chiến thắng.");
+        }
+    </script>
+</body>
+</html>

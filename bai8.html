@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Hàm tính số tiền tip dựa trên quy tắc đã cho
+        function calcTip(bill) {
+          return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+        }
+  
+        // Mảng chứa các giá trị hóa đơn
+        const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+  
+        // Mảng chứa giá trị tip cho từng hóa đơn
+        const tips = [];
+        // Mảng chứa giá trị tổng cộng (hóa đơn + tip) cho từng hóa đơn
+        const totals = [];
+  
+        // Tính giá trị tip và tổng cộng cho từng hóa đơn sử dụng vòng lặp
+        for (let i = 0; i < bills.length; i++) {
+          const tip = calcTip(bills[i]);
+          tips.push(tip);
+          totals.push(bills[i] + tip);
+        }
+  
+        // In ra danh sách giá trị tip và tổng cộng
+        console.log("Danh sách giá trị tip:", tips);
+        console.log("Danh sách giá trị tổng cộng:", totals);
+  
+        // Hàm tính giá trị trung bình
+        function calcAverage(arr) {
+          const sum = arr.reduce((acc, val) => acc + val, 0);
+          return sum / arr.length;
+        }
+  
+        // Tính giá trị trung bình của tổng cộng
+        const average = calcAverage(totals);
+        console.log(`Giá trị trung bình của tổng cộng là ${average.toFixed(2)}`);
+      </script>
+</body>
+</html>
